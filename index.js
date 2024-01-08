@@ -20,6 +20,7 @@ function capitalizeFirstLetter(string) {
 
 function playRound(playerSelection, computerSelection) {
     let announcement;
+    let result;
     console.log("Inside playRound: ", computerSelection, playerSelection);
     playerSelection = playerSelection.trim().toLowerCase();
     if (playerSelection === computerSelection) {
@@ -29,12 +30,16 @@ function playRound(playerSelection, computerSelection) {
             || playerSelection === 'paper' && computerSelection === 'rock') {
         playerSelection = capitalizeFirstLetter(playerSelection);
         announcement = `You win! ${playerSelection} beats ${computerSelection}.`;
+        result = true;
     } else {
         announcement = `You lose, ${computerSelection} beats ${playerSelection}.`;
+        result = false;
     }
-    return announcement;
+    console.log(announcement);
+    return result;
 }
 
+// TEST: playRound()
 const playerSelection = "paper";
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
