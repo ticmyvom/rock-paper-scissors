@@ -1,3 +1,11 @@
+playBtn = document.querySelector('#play');
+playBtn.onclick = function() {
+    
+}
+
+
+
+
 /* Convert 0-2 to 'Rock, 'Paper', Scissors' */
 function numToTool(number) {
     switch (number) {
@@ -78,6 +86,6 @@ function game() {
     console.log(result);
 }
 
-game();
+// game();
 
 // TODO: possibly group log messages for better organization
