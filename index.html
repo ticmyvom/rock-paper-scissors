@@ -12,24 +12,29 @@
       Let's play Rock, Paper, Scissors!
     </h1>
 
-    <input id="play" type="button" value="Play"/>
+    <button id="play">Play</button>
 
-    <div class="after-play">
-      <h2>Game X</h2>
+    <div id="play-area">
+      <h2>Game <span id="game-count"></span></h2>
       <h2>Choose One</h2>
-      <div class="player-choice">
+      <div id="player-choice">
         <input id="rock" type="button" value="🪨"/>
         <input id="paper" type="button" value="📰"/>
         <input id="scissors" type="button" value="✂️"/>
       </div>
-      <div class="result-per-game">
-        <p>Result:</p>
-        <p>Your score so far:</p>
+      <div>
+        <p id="result-per-game">Result: </p>
+        <p id="score-so-far">Your score so far: </p>
       </div>
     </div>
 
-    <div class="engame-result">
-      
+    <div>
+      <button id="nextBtn">Next</button>
+
+    </div>
+
+    <div id="engame-result">
+
     </div>
 
 
