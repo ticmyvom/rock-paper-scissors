@@ -37,7 +37,6 @@ function game() {
     async function playGame() {
         for (let i = 0; i < numGameTotal; i++) {
             await getUserSelection();
-            console.log('getUserSelection completed: ',playerSelection);
             // playerSelection should now be set
             let computerSelection = getComputerChoice();
             let result = playRound(playerSelection, computerSelection);
@@ -53,7 +52,7 @@ function game() {
             } else {
                 computerScore += 1;
             }
-            console.log(`End of round result: player has won ${playerScore} out of ${i + 1} rounds.`);
+            document.querySelector('#score-so-far').textContent = `So far, player has won ${playerScore} out of ${i + 1} rounds.`;
         } // end for
 
 
@@ -86,7 +85,6 @@ function capitalizeFirstLetter(string) {
 function playRound(playerSelection, computerSelection) {
     let announcement;
     let result;
-    // console.log("Inside playRound: ", computerSelection, playerSelection);
     playerSelection = playerSelection.trim().toLowerCase();
     if (playerSelection === computerSelection) {
         return "TIES";
@@ -100,10 +98,6 @@ function playRound(playerSelection, computerSelection) {
         announcement = `You lose, ${computerSelection} beats ${playerSelection}.`;
         result = false; // computer wins
     }
-    console.log(announcement);
+    document.querySelector('#result-per-game').textContent = `Result: ` + announcement
     return result;
 }
-
-
-
-// TODO: possibly group log messages for better organization
