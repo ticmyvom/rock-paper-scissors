@@ -14,7 +14,7 @@
 
     <button id="play">Play</button>
 
-    <div id="play-area">
+    <div id="play-area" class="hidden">
       <h2 id="game-count"></h2>
       <h2>Choose One</h2>
       <div id="player-choice">
@@ -22,14 +22,10 @@
         <input id="paper" class="tool-button" type="button" value="📰"/>
         <input id="scissors" class="tool-button" type="button" value="✂️"/>
       </div>
-      <div>
-        <p id="result-per-game">Result: </p>
+      <div id="result-area">
+        <p id="result-per-round"></p>
         <p id="score-so-far"></p>
       </div>
-    </div>
-
-    <div>
-      <button id="nextBtn">Next</button>
     </div>
 
     <h2 id="endgame-result"></h2>

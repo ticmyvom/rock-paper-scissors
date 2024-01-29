@@ -7,7 +7,8 @@ playBtn.addEventListener('click', game);
 /* Play a best-of-five game that keeps score and return the winner at the end */
 function game() {
     playBtn.style.display = 'none';
-    playArea.style.display = 'block';
+    playArea.classList.remove('hidden');
+    playArea.classList.add('show');
 
     let rockBtn = document.querySelector('input#rock');
     let paperBtn = document.querySelector('input#paper');
@@ -122,6 +123,6 @@ function playRound(playerSelection, computerSelection) {
         announcement = `You lose, ${computerSelection} beats ${playerSelection}.`;
         result = false; // computer wins
     }
-    document.querySelector('#result-per-game').textContent = `Result: ` + announcement
+    document.querySelector('#result-per-round').textContent = `Result: ` + announcement
     return result;
 }

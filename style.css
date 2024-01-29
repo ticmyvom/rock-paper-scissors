@@ -1,7 +1,33 @@
-#play-area, #nextBtn {
+#play-area.hidden {
     display: none;
 }
 
 .tool-button.clicked {
     background-color: lime; 
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#play-area.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#result-area {
+    text-align: center;
+}
+
+input.tool-button {
+    height: 80px;
+    font-size: 60px;
+    margin: 8px;
+}
+
