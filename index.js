@@ -55,9 +55,20 @@ function game() {
             document.querySelector('#score-so-far').textContent = `So far, player has won ${playerScore} out of ${i + 1} rounds.`;
         } // end for
 
+        let endgameResult;
+        if (playerScore > computerScore) {
+            endgameResult = "You won! Amazing! ";
+            
+            var batman = document.createElement('img');
+            batman.src = './Batman-Approved.jpg';
+            batman.style.width = '30px';
 
-        let endgameResult = (playerScore > computerScore) ? "Player won!" : "Computer won.";
-        console.log(endgameResult);
+            document.querySelector('#endgame-result').textContent = endgameResult;
+            document.querySelector('#endgame-result').append(batman);
+        } else {
+            endgameResult = "Computer won! Let's try again later, shall we?";
+            document.querySelector('#endgame-result').textContent = endgameResult;
+        }
     }
 
     playGame();
