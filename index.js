@@ -36,6 +36,8 @@ function game() {
     }
     async function playGame() {
         for (let i = 0; i < numGameTotal; i++) {
+            document.querySelector('#game-count').textContent = `Game ${i + 1}`;
+
             await getUserSelection();
             // playerSelection should now be set
             let computerSelection = getComputerChoice();
@@ -58,7 +60,7 @@ function game() {
         let endgameResult;
         if (playerScore > computerScore) {
             endgameResult = "You won! Amazing! ";
-            
+
             var batman = document.createElement('img');
             batman.src = './Batman-Approved.jpg';
             batman.style.width = '30px';
