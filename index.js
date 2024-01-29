@@ -68,7 +68,7 @@ function game() {
             endgameResult = "You won! Amazing! ";
 
             var batman = document.createElement('img');
-            batman.src = './Batman-Approved.jpg';
+            batman.src = './img/Batman-Approved.jpg';
             batman.style.width = '30px';
 
             endgameResultElement.textContent = endgameResult;
