@@ -62,6 +62,8 @@ function game() {
         } // end for
 
         let endgameResult;
+        let endgameResultElement = document.querySelector('#endgame-result');
+
         if (playerScore > computerScore) {
             endgameResult = "You won! Amazing! ";
 
@@ -69,12 +71,16 @@ function game() {
             batman.src = './Batman-Approved.jpg';
             batman.style.width = '30px';
 
-            document.querySelector('#endgame-result').textContent = endgameResult;
-            document.querySelector('#endgame-result').append(batman);
+            endgameResultElement.textContent = endgameResult;
+            endgameResultElement.append(batman);
         } else {
             endgameResult = "Computer won! Let's try again later, shall we?";
-            document.querySelector('#endgame-result').textContent = endgameResult;
+            endgameResultElement.textContent = endgameResult;
         }
+
+        endgameResultElement.style.border = 'black solid 2px';
+        endgameResultElement.style.padding = '8px';
+
     }
 
     playGame();
