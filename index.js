@@ -21,14 +21,17 @@ function game() {
         return new Promise((resolve) => {
             rockBtn.addEventListener('click', function() {
                 playerSelection = 'rock';
+                highlightButton(rockBtn);
                 resolve();
             });
             paperBtn.addEventListener('click', function() {
                 playerSelection = 'paper';
+                highlightButton(paperBtn);
                 resolve();
             });
             scissorsBtn.addEventListener('click', function() {
                 playerSelection = 'scissors';
+                highlightButton(scissorsBtn);
                 resolve();
             });
             
@@ -74,6 +77,14 @@ function game() {
     }
 
     playGame();
+}
+
+function highlightButton(button) {
+    button.classList.add('clicked');
+
+    setTimeout(() => {
+        button.classList.remove('clicked');
+    }, 500); // 500 milliseconds delay
 }
 
 /* Convert 0-2 to 'Rock, 'Paper', Scissors' */

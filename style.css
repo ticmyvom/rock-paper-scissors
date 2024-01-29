@@ -1,3 +1,7 @@
 #play-area, #nextBtn {
     display: none;
 }
+
+.tool-button.clicked {
+    background-color: lime; 
+}
