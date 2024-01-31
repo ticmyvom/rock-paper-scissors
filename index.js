@@ -58,7 +58,10 @@ function game() {
             } else {
                 computerScore += 1;
             }
+
+            // Set opacity to trigger the fade-in effect with a delay
             document.querySelector('#score-so-far').textContent = `So far, player has won ${playerScore} out of ${i + 1} rounds.`;
+            document.querySelector('#score-so-far').style.opacity = '1'; 
         } // end for
 
         let endgameResult;
